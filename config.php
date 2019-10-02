@@ -6,7 +6,7 @@ if(!$producao){
 
     return [
         'database' => [
-            'name' => 'framework',
+            'name' => 'sistemajf',
             'username' => 'root',
             'password' => '',
             'connection' => 'mysql:host=127.0.0.1',
@@ -20,8 +20,8 @@ if(!$producao){
 
     return [
         'database' => [
-            'name' => 'framework',
-            'username' => 'framework',
+            'name' => 'sistemajf',
+            'username' => 'sistemajf',
             'password' => 'pass',
             'connection' => 'mysql:host=127.0.0.1',
             'options' => [
