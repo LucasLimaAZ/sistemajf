@@ -27,23 +27,28 @@
 			<p class="login-box-msg">Faça login para acessar o sistema</p>
 			<form id="login" method="post">
 				<div class="form-group has-feedback">
-					<input type="email" class="form-control" placeholder="Usuário">
+					<input type="text" class="form-control" name="usuario" placeholder="Usuário">
 					<span class="glyphicon glyphicon-user form-control-feedback"></span>
 				</div>
 				<div class="form-group has-feedback">
-					<input type="password" class="form-control" placeholder="Senha">
+					<input type="password" class="form-control" name="senha" placeholder="Senha">
 					<span class="glyphicon glyphicon-lock form-control-feedback"></span>
 				</div>
 				<div class="row">
-					<div class="col-xs-8">
+					<!-- <div class="col-xs-8">
 						<div class="checkbox icheck">
 						<label>
 							<input type="checkbox"> Lembrar de mim
 						</label>
 						</div>
-					</div>
+					</div> -->
 					<div class="col-xs-12">
 						<button type="submit" class="btn btn-primary btn-block btn-flat">Acessar</button>
+					</div>
+					<div class="row" id="incorreto">
+						<div class="col-md-12">
+							<p style="padding-top:10px;text-align:center;color:red;">Usuário ou senha incorretos.</p>
+						</div>
 					</div>
 				</div>
 			</form>
@@ -54,6 +59,7 @@
 <script src="public/theme/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="public/theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="public/theme/plugins/iCheck/icheck.min.js"></script>
+<script src="public/assets/js/login.js"></script>
 <script>
     $(function () {
 	$('input').iCheck({

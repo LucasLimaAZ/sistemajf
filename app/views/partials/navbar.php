@@ -30,15 +30,15 @@
         </li>
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="public/theme/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-            <span class="hidden-xs">Alexander Pierce</span>
+            <img src="public/assets/img/user.png" class="user-image" alt="User Image">
+            <span class="hidden-xs"><?=$_SESSION['nome'];?></span>
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
               <img src="public/theme/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
               <p>
-                Usuário
-                <small>Administrador</small>
+                <?=$_SESSION['nome'];?>
+                <small><?=$_SESSION['hierarquia'] == 'admin' ? 'Administrador' : 'Funcionário';?></small>
               </p>
             </li>
             <li class="user-footer">
@@ -46,7 +46,7 @@
                 <a href="#" class="btn btn-default btn-flat">Perfil</a>
               </div>
               <div class="pull-right">
-                <a href="#" class="btn btn-default btn-flat">Sair</a>
+                <a href="logout" class="btn btn-default btn-flat">Sair</a>
               </div>
             </li>
           </ul>

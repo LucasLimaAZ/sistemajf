@@ -32,10 +32,10 @@ class Router
     public function direct($uri, $requestType)
     {
         if( //ROTAS DE EXCEÇÃO À AUTENTICAÇÃO
-            $uri != "framework/login" &&
-            $uri != "framework/recuperar-senha" && 
-            $uri != "framework/enviar-email" && 
-            $uri != "framework/atualizar-senha"
+            $uri != "sistemajf/login" &&
+            $uri != "sistemajf/recuperar-senha" && 
+            $uri != "sistemajf/enviar-email" && 
+            $uri != "sistemajf/atualizar-senha"
         ){
             
             if(!isset($_SESSION) || !isset($_SESSION['logado']) || $_SESSION['logado'] != 1){
