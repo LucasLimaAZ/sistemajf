@@ -18,14 +18,65 @@
         </section>
 
         <section class="cadastro-produtos-body">
+
             <div class="row">
-                <div class="col-md-8 offset-md-2 canvas">
-                    <h1 class="title"><i class="fa fa-shopping-cart"></i> Cadastro de Protudos</h1>
-                </div>
+                <form id="produto">
+                    <div class="col-md-8 col-md-offset-2 white-box">
+                        <h1 class="title"><i class="fa fa-shopping-cart"></i> Cadastro de Protudos</h1>
+
+                        <div class="row pt-3">
+                            <div class="col-md-4">
+                                <label for="">Título:</label>
+                                <input type="text" name="nome" class="form-control" placeholder="Nome da peça">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Referência:</label>
+                                <input type="text" name="referencia" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Aplicação:</label>
+                                <input type="text" name="aplicacao" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-md-4">
+                                <label for="">Valor de custo:</label>
+                                <input type="text" name="valor_custo" class="form-control">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="">Valor de venda:</label>
+                                <input type="text" name="valor_venda" class="form-control">
+                            </div>
+                            <div class="col-md-2">
+                                <label for="">Categoria:</label>
+                                <select class="form-control" name="categoria">
+                                    <option value="mecanica">Mecânica</option>
+                                    <option value="acessorios">Acessórios</option>
+                                    <option value="lubrificantes">Lubrificantes</option>
+                                    <option value="outros">Outros</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="quantidade">Quantidade:</label>
+                                <input type="number" class="form-control" name="quantidade" placeholder="0">
+                            </div>
+                        </div>
+
+                        <div class="row pt-3">
+                            <div class="col-md-4 col-md-offset-4" style="padding-top:24px;">
+                                <button class="btn btn-primary" id="botao-produto" type="button" style="width:100%;">Cadastrar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
             </div>
+
         </section>
 
     </div>
 
 </div>
+<script src="public/assets/js/cadastroProdutos.js"></script>
 <?php require 'app/views/partials/footer.php'; ?>

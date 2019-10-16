@@ -1,5 +1,5 @@
 <header class="main-header">
-  <a href="#" class="logo">
+  <a href="home" class="logo">
     <span class="logo-mini"><b>JF</b></span>
     <span class="logo-lg"><b>JF</b> Peças Automotivas</span>
   </a>

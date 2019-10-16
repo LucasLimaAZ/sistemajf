@@ -24,10 +24,10 @@ if(isset($_SESSION['hierarquia']) && $_SESSION['hierarquia'] == 'user'){
     
     $router->get("$folder/cadastro-produtos", 'ProdutosController@index');
     $router->get("$folder/administracao-produtos", 'ProdutosController@administrar');
-    $router->post("$folder/cadastrar-cliente", 'ProdutosController@cadastrar');
-    $router->get("$folder/produtos", 'ProdutosController@produtos');
-    $router->post("$folder/atualiza-cliente", 'ProdutosController@update');
-    $router->post("$folder/deletar-cliente", 'ProdutosController@destroy');
+    $router->post("$folder/cadastrar-produto", 'ProdutosController@cadastrar');
+    $router->get("$folder/vizualizar-produtos", 'ProdutosController@vizualizar');
+    $router->post("$folder/atualiza-produto", 'ProdutosController@update');
+    $router->post("$folder/deletar-produto", 'ProdutosController@destroy');
     
     $router->get("$folder/tela-login", 'UsersController@index');
     $router->get("$folder/cadastro-usuarios", 'UsersController@cadastro');

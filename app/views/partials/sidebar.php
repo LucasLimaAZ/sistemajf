@@ -18,8 +18,10 @@
 					</span>
 				</a>
 				<ul class="treeview-menu">
-					<li><a href="#"><i class="fa fa-plus"></i> Cadastrar</a></li>
-					<li><a href="#"><i class="fa fa-cart-arrow-down"></i> Dar baixa</a></li>
+					<li><a href="cadastro-produtos"><i class="fa fa-plus"></i> Cadastrar</a></li>
+					<li><a href="baixa-produtos"><i class="fa fa-cart-arrow-down"></i> Dar baixa</a></li>
+					<li><a href="vizualizar-produtos"><i class="fa fa-list"></i> Vizualizar produtos</a></li>
+					<li><a href="vizualizar-baixas"><i class="fa fa-arrow-down"></i> Vizualizar baixas</a></li>
 				</ul>
 			</li>
 		</ul>
