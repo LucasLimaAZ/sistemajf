@@ -200,6 +200,9 @@
 </div>
 <!-- ./wrapper -->
 
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script src="public/plugins/jquery-3.4.1.min.js"></script>
 <script src="public/theme/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="public/theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="public/theme/bower_components/fastclick/lib/fastclick.js"></script>
@@ -211,5 +214,7 @@
 <script src="public/theme/bower_components/chart.js/Chart.js"></script>
 <script src="public/theme/dist/js/pages/dashboard2.js"></script>
 <script src="public/theme/dist/js/demo.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 </body>
 </html>

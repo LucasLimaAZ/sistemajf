@@ -21,7 +21,7 @@
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="white-box">
-                        <table id="produtos" class="table-striped display nowrap dataTable dtr-inline collapsed">
+                        <table id="produtos" class="display responsive table table-striped">
                             <thead>
                                 <tr>
                                     <th>Id</th>
@@ -57,5 +57,6 @@
     </div>
 
 </div>
-<script src="public/assets/js/produtos.js"></script>
+
 <?php require 'app/views/partials/footer.php'; ?>
+<script src="public/assets/js/produtos.js"></script>
