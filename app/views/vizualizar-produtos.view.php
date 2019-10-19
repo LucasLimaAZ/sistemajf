@@ -17,10 +17,14 @@
             </ol>
         </section>
 
-        <section>
+        <section class="tabela-produtos">
+
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <div class="white-box">
+
+                        <h1 class="title"><i class="fa fa-cart-plus"></i> Acrescentar Produto ao Estoque</h1>
+
                         <table id="produtos" class="display responsive table table-striped">
                             <thead>
                                 <tr>
@@ -37,6 +41,7 @@
                             <tbody>
                                 <?php foreach($produtos as $produto): ?>
                                 <tr>
+                                    <input type="hidden" id="quantidade-<?=$produto->id;?>" value="<?=$produto->quantidade;?>">
                                     <td><?=$produto->id;?></td>
                                     <td><?=$produto->nome;?></td>
                                     <td><?=$produto->referencia;?></td>
@@ -44,14 +49,16 @@
                                     <td><?=$produto->valor_custo;?></td>
                                     <td><?=$produto->valor_venda;?></td>
                                     <td><?=$produto->data_entrada;?></td>
-                                    <td><?=$produto->quantidade;?></td>
+                                    <td><span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> <a id="<?=$produto->id;?>" href="javascript:void(0);" onclick="quantidade(this);"><i class="fa fa-plus adicionar-ao-estoque"></i></a></td>
                                 </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>
+            
         </section>
         
     </div>

@@ -12,17 +12,22 @@
 		<ul class="sidebar-menu" data-widget="tree">
 			<li class="treeview">
 				<a href="#">
-					<i class="fa fa-shopping-cart"></i> <span>Produtos</span>
+					<i class="fa fa-shopping-cart"></i> <span>Cadastrar Produtos</span>
 					<span class="pull-right-container">
 						<i class="fa fa-angle-left pull-right"></i>
 					</span>
 				</a>
 				<ul class="treeview-menu">
-					<li><a href="cadastro-produtos"><i class="fa fa-plus"></i> Cadastrar</a></li>
-					<li><a href="baixa-produtos"><i class="fa fa-cart-arrow-down"></i> Dar baixa</a></li>
-					<li><a href="vizualizar-produtos"><i class="fa fa-list"></i> Vizualizar produtos</a></li>
-					<li><a href="vizualizar-baixas"><i class="fa fa-arrow-down"></i> Vizualizar baixas</a></li>
+					<li><a href="cadastro-produtos"><i class="fa fa-plus"></i> Novo</a></li>
+					<li><a href="vizualizar-produtos"><i class="fa fa-arrow-up"></i> Acrescentar ao Estoque</a></li>
 				</ul>
+			</li>
+		</ul>
+		<ul class="sidebar-menu" data-widget="tree">
+			<li>
+				<a href="baixas">
+					<i class="fa fa-cart-arrow-down"></i> <span>Dar Baixa</span>
+				</a>
 			</li>
 		</ul>
 	</section>

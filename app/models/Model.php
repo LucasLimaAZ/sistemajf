@@ -7,9 +7,9 @@ use App\core\App;
 class Model
 {
     
-    public static function quantidade($table)
+    public static function quantidade()
     {
-        $result = App::get('database')->selectAll($table);
+        $result = App::get('database')->selectAll(static::$table);
 
         $numero = 0;
 

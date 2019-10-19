@@ -78,5 +78,5 @@
     </div>
 
 </div>
-<script src="public/assets/js/cadastroProdutos.js"></script>
 <?php require 'app/views/partials/footer.php'; ?>
+<script src="public/assets/js/cadastroProdutos.js"></script>

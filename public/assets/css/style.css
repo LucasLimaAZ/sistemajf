@@ -13,3 +13,47 @@
     border-bottom:1px solid #e1e1e1;
     padding-bottom: 1%;
 }
+
+.tabela-produtos input, select{
+    border:1px solid #b0b0b0;
+}
+
+.tabela-produtos label{
+    width:100%;
+}
+
+.tabela-produtos input{
+    width:80%;
+    padding:3px;
+}
+
+.tabela-produtos .paginate_button{
+    background:white !important;
+    border-radius:0px !important;
+}
+
+.dataTables_wrapper .dataTables_filter{
+    text-align:center !important;
+    float:none !important;
+    margin:5px;
+    padding:2%;
+}
+
+.dataTables_wrapper .dataTables_length {
+    float: none !important;
+}
+
+.tabela-produtos td{
+    text-align:center;
+}
+
+.adicionar-ao-estoque{
+    margin-left:10px;
+    color:white;
+    padding:7px;
+    background-color:green;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+    background-color:#d1d1d1 !important;
+}

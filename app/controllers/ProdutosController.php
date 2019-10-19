@@ -19,6 +19,13 @@ class ProdutosController extends Controller
         return $this->responderJSON($_POST);
     }
 
+    public function atualizar()
+    {
+        Produto::atualizar($_POST);
+
+        return $this->responderJSON($_POST);
+    }
+
     public function vizualizar()
     {
         $produtos = Produto::buscar();

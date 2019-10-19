@@ -33,16 +33,25 @@ function quantidade(e){
 
     let id = e.id;
     let quantidadeAtual = $(`#quantidade-${id}`).val();
-    let quantidade = prompt("Por favor insira quantas unidades deseja acrescentar:");
-    let novaQuantidade = parseInt(quantidadeAtual) + parseInt(quantidade);
+    let quantidade = prompt("Por favor insira quantas unidades deste produto foram vendidas:");
+    let novaQuantidade = parseInt(quantidadeAtual) - parseInt(quantidade);
 
     if(quantidade != null){
-        $(`#quantidade-atual-${id}`).html(novaQuantidade);
-        let dados = {id:id, quantidade:novaQuantidade};
 
-        $.post('atualiza-produto', dados, response => {
-            console.log(response);
-        });
+        if(novaQuantidade < 0){
+            alert("Você não pode dar baixa em mais produtos do que você tem!");
+            return;
+        }else{
+            let quantidadeAtual = $(`#quantidade-${id}`).val(novaQuantidade);
+
+            $(`#quantidade-atual-${id}`).html(novaQuantidade);
+            let dados = {id:id, quantidade:novaQuantidade};
+    
+            $.post('atualiza-produto', dados, response => {
+                console.log(response);
+            });
+        }
+
     }
 
 };

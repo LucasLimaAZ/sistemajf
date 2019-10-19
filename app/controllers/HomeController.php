@@ -2,15 +2,17 @@
 
 namespace App\Controllers;
 
-use App\models\Cliente;
-use App\models\Arquivos;
+use App\models\Baixa;
+use App\models\Produto;
 
 class HomeController
 {
 
     public function index()
     {
-        return view('index');
+        $numeros['produtos'] = Produto::quantidade();
+        
+        return view('index', compact('numeros'));
     }
 
     public function userIndex()
