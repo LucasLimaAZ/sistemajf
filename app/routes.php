@@ -23,11 +23,14 @@ if(isset($_SESSION['hierarquia']) && $_SESSION['hierarquia'] == 'user'){
     $router->get("$folder/home", 'HomeController@index');
     
     $router->get("$folder/cadastro-produtos", 'ProdutosController@index');
-    $router->get("$folder/administracao-produtos", 'ProdutosController@administrar');
+    $router->get("$folder/edicao-produtos", 'ProdutosController@editar');
     $router->post("$folder/cadastrar-produto", 'ProdutosController@cadastrar');
-    $router->get("$folder/vizualizar-produtos", 'ProdutosController@vizualizar');
+    $router->get("$folder/acrescentar-produtos", 'ProdutosController@acrescentar');
     $router->post("$folder/atualiza-produto", 'ProdutosController@atualizar');
     $router->post("$folder/deletar-produto", 'ProdutosController@destroy');
+    $router->get("$folder/consultar-estoque", 'ProdutosController@consultarEstoque');
+    $router->get("$folder/buscar-produtos", 'ProdutosController@buscar');
+    $router->get("$folder/editar-estoque", 'ProdutosController@editar');
     
     $router->get("$folder/tela-login", 'UsersController@index');
     $router->get("$folder/cadastro-usuarios", 'UsersController@cadastro');

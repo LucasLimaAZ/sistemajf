@@ -27,7 +27,8 @@
                         <div class="row pt-3">
                             <div class="col-md-4">
                                 <label for="">Título:</label>
-                                <input type="text" name="nome" class="form-control" placeholder="Nome da peça">
+                                <input type="text" name="nome" id="nome-produto" class="form-control" placeholder="Nome da peça" required>
+                                <span id="produto-existe" style="color:red;display:none;"> Um produto com o mesmo nome já existe!</span>
                             </div>
                             <div class="col-md-4">
                                 <label for="">Referência:</label>
@@ -42,11 +43,11 @@
                         <div class="row pt-3">
                             <div class="col-md-4">
                                 <label for="">Valor de custo:</label>
-                                <input type="text" name="valor_custo" class="form-control">
+                                <input type="text" name="valor_custo" class="form-control" required>
                             </div>
                             <div class="col-md-4">
                                 <label for="">Valor de venda:</label>
-                                <input type="text" name="valor_venda" class="form-control">
+                                <input type="text" name="valor_venda" class="form-control" required>
                             </div>
                             <div class="col-md-2">
                                 <label for="">Categoria:</label>
@@ -54,18 +55,20 @@
                                     <option value="mecanica">Mecânica</option>
                                     <option value="acessorios">Acessórios</option>
                                     <option value="lubrificantes">Lubrificantes</option>
+                                    <option value="quimicos">Químicos</option>
+                                    <option value="parafusos">Parafusos / Porcas</option>
                                     <option value="outros">Outros</option>
                                 </select>
                             </div>
                             <div class="col-md-2">
                                 <label for="quantidade">Quantidade:</label>
-                                <input type="number" class="form-control" name="quantidade" placeholder="0">
+                                <input type="number" class="form-control" name="quantidade" placeholder="0" required>
                             </div>
                         </div>
 
                         <div class="row pt-3">
                             <div class="col-md-4 col-md-offset-4" style="padding-top:24px;">
-                                <button class="btn btn-primary" id="botao-produto" type="button" style="width:100%;">Cadastrar</button>
+                                <button class="btn btn-primary" id="botao-produto" type="submit" style="width:100%;">Cadastrar</button>
                             </div>
                         </div>
 

@@ -26,11 +26,32 @@ class ProdutosController extends Controller
         return $this->responderJSON($_POST);
     }
 
-    public function vizualizar()
+    public function acrescentar()
     {
         $produtos = Produto::buscar();
 
-        return view('vizualizar-produtos', compact('produtos'));
+        return view('acrescentar-produtos', compact('produtos'));
+    }
+
+    public function consultarEstoque()
+    {
+        $produtos = Produto::buscar();
+
+        return view('consultar-estoque', compact('produtos'));
+    }
+
+    public function buscar()
+    {
+        $produtos = Produto::buscar();
+        
+        return $this->responderJSON($produtos);
+    }
+
+    public function editar()
+    {
+        $produtos = Produto::buscar();
+
+        return view('editar-estoque', compact('produtos'));
     }
 
 }

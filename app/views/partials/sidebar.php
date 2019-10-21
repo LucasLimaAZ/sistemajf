@@ -19,11 +19,21 @@
 				</a>
 				<ul class="treeview-menu">
 					<li><a href="cadastro-produtos"><i class="fa fa-plus"></i> Novo</a></li>
-					<li><a href="vizualizar-produtos"><i class="fa fa-arrow-up"></i> Acrescentar ao Estoque</a></li>
+					<li><a href="acrescentar-produtos"><i class="fa fa-arrow-up"></i> Acrescentar ao Estoque</a></li>
 				</ul>
 			</li>
 		</ul>
 		<ul class="sidebar-menu" data-widget="tree">
+			<li>
+				<a href="consultar-estoque">
+					<i class="fa fa-list"></i> <span>Consultar Estoque</span>
+				</a>
+			</li>
+			<li>
+				<a href="editar-estoque">
+					<i class="fa fa-edit"></i> <span>Editar Estoque</span>
+				</a>
+			</li>
 			<li>
 				<a href="baixas">
 					<i class="fa fa-cart-arrow-down"></i> <span>Dar Baixa</span>

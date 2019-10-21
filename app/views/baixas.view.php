@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <table id="produtos" class="display responsive table table-striped">
+                                <table id="produtos" class="display responsive nowrap dataTable no-footer dtr-inline collapsed">
                                     <thead>
                                         <tr>
                                             <th>Id</th>
@@ -45,16 +45,16 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach($produtos as $produto): ?>
-                                        <tr>
+                                        <tr role="row">
                                             <input type="hidden" id="quantidade-<?=$produto->id;?>" value="<?=$produto->quantidade;?>">
-                                            <td><?=$produto->id;?></td>
-                                            <td><?=$produto->nome;?></td>
-                                            <td><?=$produto->referencia;?></td>
-                                            <td><?=$produto->aplicacao;?></td>
-                                            <td><?=$produto->valor_custo;?></td>
-                                            <td><?=$produto->valor_venda;?></td>
-                                            <td><?=$produto->data_entrada;?></td>
-                                            <td><span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> <a id="<?=$produto->id;?>" href="javascript:void(0);" onclick="quantidade(this);"><span class="adicionar-ao-estoque"><i class="fa fa-cart-arrow-down"></i> DAR BAIXA</span></a></td>
+                                            <td tabindex="0" class="sorting_1"><?=$produto->id;?></td>
+                                            <td tabindex="1"><?=$produto->nome;?></td>
+                                            <td tabindex="2"><?=$produto->referencia;?></td>
+                                            <td tabindex="3"><?=$produto->aplicacao;?></td>
+                                            <td tabindex="4"><?=$produto->valor_custo;?></td>
+                                            <td tabindex="5"><?=$produto->valor_venda;?></td>
+                                            <td tabindex="6"><?=$produto->data_entrada;?></td>
+                                            <td tabindex="7"><span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> <a id="<?=$produto->id;?>" href="javascript:void(0);" onclick="quantidade(this);"><span class="adicionar-ao-estoque"><i class="fa fa-cart-arrow-down"></i> BAIXA</span></a></td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>

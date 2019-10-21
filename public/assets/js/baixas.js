@@ -2,6 +2,11 @@ $(document).ready(() => {
 
     $('#produtos').DataTable({
         responsive:true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 3, targets: 1 },
+            { responsivePriority: 2, targets: -1 }
+        ],
         "language":{
             "sEmptyTable": "Nenhum produto encontrado",
             "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ produtos",

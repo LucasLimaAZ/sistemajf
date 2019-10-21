@@ -2,6 +2,11 @@ $(document).ready(() => {
 
     $('#produtos').DataTable({
         responsive:true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 3, targets: 1 },
+            { responsivePriority: 2, targets: -1 }
+        ],
         "language":{
             "sEmptyTable": "Nenhum produto encontrado",
             "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ produtos",
@@ -29,7 +34,42 @@ $(document).ready(() => {
 
 });
 
-function quantidade(e){
+$(".fechar").click(() => {
+    $('#ver-mais').hide();
+});
+
+$("#atualiza-produto").submit(() => {
+
+    event.preventDefault();
+
+    let dados = $("#atualiza-produto").serialize();
+    let id = $("#editar-id").val();
+
+    $.post('atualiza-produto', dados, response => {
+        console.log(JSON.parse(response));
+    })
+    .always(() => {
+        $("#ver-mais").hide();
+    })
+    .done(() => {
+        $(`#id-${id}`).html($("#editar-id").val());
+        $(`#nome-${id}`).html($("#editar-nome").val());
+        $(`#html-categoria-${id}`).html($("#editar-categoria").val());
+        $(`#referencia-${id}`).html($("#editar-referencia").val());
+        $(`#aplicacao-${id}`).html($("#editar-aplicacao").val());
+        $(`#valor_custo-${id}`).html($("#editar-custo").val());
+        $(`#valor_venda-${id}`).html($("#editar-valor_venda").val());
+        $(`#data_entrada-${id}`).html($("#editar-data_entrada").val());
+        $(`#html-quantidade-${id}`).html($("#editar-quantidade").val());
+    })
+    .fail(() => {
+        alert("Ocorreu um erro, se persistir contate o suporte!");
+    });
+
+});
+
+function quantidade(e)
+{
 
     let id = e.id;
     let quantidadeAtual = $(`#quantidade-${id}`).val();
@@ -46,3 +86,19 @@ function quantidade(e){
     }
 
 };
+
+function editar(e)
+{
+    $("#ver-mais").show();
+    let id = e.id;
+
+    $("#editar-id").val($(`#id-${id}`).html());
+    $("#editar-nome").val($(`#nome-${id}`).html());
+    $("#editar-categoria").val($(`#categoria-${id}`).val());
+    $("#editar-referencia").val($(`#referencia-${id}`).html());
+    $("#editar-aplicacao").val($(`#aplicacao-${id}`).html());
+    $("#editar-custo").val($(`#valor_custo-${id}`).html());
+    $("#editar-valor_venda").val($(`#valor_venda-${id}`).html());
+    $("#editar-data_entrada").val($(`#data_entrada-${id}`).html());
+    $("#editar-quantidade").val($(`#quantidade-${id}`).val());
+}

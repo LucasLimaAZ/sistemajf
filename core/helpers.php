@@ -16,3 +16,27 @@ function dd($data)
 {
     die(var_dump($data));
 }
+
+function categoria($categoria)
+{
+    switch ($categoria){
+        case "mecanica":
+            return "Mecânica";
+            break;
+        case "acessorios":
+            return "Acessórios";
+            break;
+        case "lubrificantes":
+            return "Lubrificantes";
+            break;
+        case "quimicos":
+            return "Químicos";
+            break;
+        case "parafusos":
+            return "Parafusos / Porcas";
+            break;
+        case "outros":
+            return "Outros";
+            break;
+    }
+}

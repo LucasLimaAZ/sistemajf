@@ -35,7 +35,7 @@
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
-              <img src="public/theme/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <img src="public/assets/img/user.png" class="img-circle" alt="User Image">
               <p>
                 <?=$_SESSION['nome'];?>
                 <small><?=$_SESSION['hierarquia'] == 'admin' ? 'Administrador' : 'Funcionário';?></small>
