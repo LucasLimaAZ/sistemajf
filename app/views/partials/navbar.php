@@ -20,7 +20,7 @@
               <ul class="menu">
                 <li>
                   <a href="#">
-                    <i class="fa fa-users text-aqua"></i> Exemplo
+                    <i class="fa fa-users text-aqua"></i> Em Breve
                   </a>
                 </li>
               </ul>
