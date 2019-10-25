@@ -41,7 +41,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach($produtos as $produto): ?>
-                                <tr>
+                                <tr role="row">
                                     <input type="hidden" id="quantidade-<?=$produto->id;?>" value="<?=$produto->quantidade;?>">
                                     <td><?=$produto->id;?></td>
                                     <td><?=$produto->nome;?></td>

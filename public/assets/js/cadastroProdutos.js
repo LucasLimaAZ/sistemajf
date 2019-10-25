@@ -1,3 +1,6 @@
+$("#valor_custo").maskMoney();
+$("#valor_venda").maskMoney();
+
 $(document).ready(() => {
 
     $.get('buscar-produtos', response => {
@@ -27,8 +30,14 @@ $("#produto").submit(() => {
 
     event.preventDefault();
 
+    $("#valor_custo").val($("#valor_custo").val().replace(".", ""));
+    $("#valor_venda").val($("#valor_venda").val().replace(".", ""));
+    $("#valor_custo").val($("#valor_custo").val().replace(",", "."));
+    $("#valor_venda").val($("#valor_venda").val().replace(",", "."));
+    $("#valor_custo").val($("#valor_custo").val().replace("R$ ", ""));
+    $("#valor_venda").val($("#valor_venda").val().replace("R$ ", ""));
+
     let dados = $("#produto").serialize();
-    console.log(dados);
 
     $.post('cadastrar-produto', dados, response => {
         console.log(response);

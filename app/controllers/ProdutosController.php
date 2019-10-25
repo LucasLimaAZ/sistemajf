@@ -26,6 +26,13 @@ class ProdutosController extends Controller
         return $this->responderJSON($_POST);
     }
 
+    public function deletar()
+    {
+        Produto::deletar($_POST);
+
+        return $this->responderJSON($_POST);
+    }
+
     public function acrescentar()
     {
         $produtos = Produto::buscar();

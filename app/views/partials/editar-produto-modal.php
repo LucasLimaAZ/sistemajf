@@ -38,11 +38,11 @@
                     <div class="row pt-3">
                         <div class="col-md-3">
                             <label for="custo">Custo:</label>
-                            <input id="editar-custo" name="valor_custo" class="form-control" type="text">
+                            <input id="editar-custo" name="valor_custo" class="form-control" type="text" data-thousands="." data-decimal="," data-prefix="R$ ">
                         </div>
                         <div class="col-md-3">
                             <label for="valor_venda">Valor de Venda:</label>
-                            <input id="editar-valor_venda" name="valor_venda" class="form-control" type="text">
+                            <input id="editar-valor_venda" name="valor_venda" class="form-control" type="text" data-thousands="." data-decimal="," data-prefix="R$ ">
                         </div>
                         <div class="col-md-3">
                             <label for="data_entrada">Data de Entrada:</label>
@@ -59,10 +59,10 @@
                             <button class="btn btn-primary" type="submit"><i class="fa fa-check"></i> Salvar</button>
                         </div>
                         <div class="col-md-4">
-                            <button class="btn btn-danger"><i class="fa fa-trash"></i> Deletar</button>
+                            <button type="button" id="deletar-produto" class="btn btn-danger"><i class="fa fa-trash"></i> Deletar</button>
                         </div>
                         <div class="col-md-4">
-                            <button class="btn btn-secondary fechar"><i class="fa fa-times"></i> Cancelar</button>
+                            <button type="button" class="btn btn-secondary fechar"><i class="fa fa-times"></i> Cancelar</button>
                         </div>
                     </div>
 

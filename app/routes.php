@@ -27,7 +27,7 @@ if(isset($_SESSION['hierarquia']) && $_SESSION['hierarquia'] == 'user'){
     $router->post("$folder/cadastrar-produto", 'ProdutosController@cadastrar');
     $router->get("$folder/acrescentar-produtos", 'ProdutosController@acrescentar');
     $router->post("$folder/atualiza-produto", 'ProdutosController@atualizar');
-    $router->post("$folder/deletar-produto", 'ProdutosController@destroy');
+    $router->post("$folder/deletar-produto", 'ProdutosController@deletar');
     $router->get("$folder/consultar-estoque", 'ProdutosController@consultarEstoque');
     $router->get("$folder/buscar-produtos", 'ProdutosController@buscar');
     $router->get("$folder/editar-estoque", 'ProdutosController@editar');

@@ -42,6 +42,13 @@ $("#atualiza-produto").submit(() => {
 
     event.preventDefault();
 
+    $("#editar-custo").val($("#editar-custo").val().replace(".", ""));
+    $("#editar-valor_venda").val($("#editar-valor_venda").val().replace(".", ""));
+    $("#editar-custo").val($("#editar-custo").val().replace(",", "."));
+    $("#editar-valor_venda").val($("#editar-valor_venda").val().replace(",", "."));
+    $("#editar-custo").val($("#editar-custo").val().replace("R$ ", ""));
+    $("#editar-valor_venda").val($("#editar-valor_venda").val().replace("R$ ", ""));
+
     let dados = $("#atualiza-produto").serialize();
     let id = $("#editar-id").val();
 
@@ -97,8 +104,34 @@ function editar(e)
     $("#editar-categoria").val($(`#categoria-${id}`).val());
     $("#editar-referencia").val($(`#referencia-${id}`).html());
     $("#editar-aplicacao").val($(`#aplicacao-${id}`).html());
-    $("#editar-custo").val($(`#valor_custo-${id}`).html());
-    $("#editar-valor_venda").val($(`#valor_venda-${id}`).html());
+    $("#editar-custo").val($(`#valor_custo-${id}`).html().replace(".", ","));
+    $("#editar-valor_venda").val($(`#valor_venda-${id}`).html().replace(".", ","));
     $("#editar-data_entrada").val($(`#data_entrada-${id}`).html());
     $("#editar-quantidade").val($(`#quantidade-${id}`).val());
 }
+
+$("#deletar-produto").click(() => {
+
+    $("#ver-mais").show();
+
+    let confirmacao = confirm("Você tem certeza que deseja deletar este produto?");
+
+    if(confirmacao){
+        let id = parseInt($("#editar-id").val());
+        let produto = {id: id};
+
+        console.log(produto);
+
+        $.post('deletar-produto', produto, response => {
+            console.log(response);
+        })
+        .done(() => {
+            $("#ver-mais").hide();
+            $(`#produto-${id}`).fadeOut(300);
+        })
+        .fail(() => {
+            alert("Ocorreu um erro, se persistir por favor contatar o suporte.");
+        });
+    }
+
+});

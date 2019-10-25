@@ -34,14 +34,14 @@ class Model
         App::get('database')->update(static::$table, $dados, $where = ["id", $dados['id']]);
     }
 
-    public static function deletar($usuario)
+    public static function deletar($dados)
     {
-        App::get('database')->delete(static::$table, $where = ["id", $usuario]);
+        App::get('database')->delete(static::$table, $where = ["id", $dados['id']]);
     }
 
-    public static function encontrar($usuario)
+    public static function encontrar($dados)
     {
-        $result = App::get('database')->selectWhere(static::$table, $usuario);
+        $result = App::get('database')->selectWhere(static::$table, $dados);
 
         return $result;
     }

@@ -42,7 +42,7 @@
                             </thead>
                             <tbody>
                                 <?php foreach($produtos as $produto): ?>
-                                <tr>
+                                <tr id="produto-<?=$produto->id;?>">
                                     <input type="hidden" id="quantidade-<?=$produto->id;?>" value="<?=$produto->quantidade;?>">
                                     <input type="hidden" id="categoria-<?=$produto->id;?>" value="<?=$produto->categoria;?>">
                                     <td tabindex="0" id="id-<?=$produto->id;?>"><?=$produto->id;?></td>

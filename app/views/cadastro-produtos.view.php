@@ -43,11 +43,11 @@
                         <div class="row pt-3">
                             <div class="col-md-4">
                                 <label for="">Valor de custo:</label>
-                                <input type="text" name="valor_custo" class="form-control" required>
+                                <input type="text" name="valor_custo" id="valor_custo" class="form-control" data-thousands="." data-decimal="," data-prefix="R$ " required>
                             </div>
                             <div class="col-md-4">
                                 <label for="">Valor de venda:</label>
-                                <input type="text" name="valor_venda" class="form-control" required>
+                                <input type="text" name="valor_venda" id="valor_venda" class="form-control" data-thousands="." data-decimal="," data-prefix="R$ " required>
                             </div>
                             <div class="col-md-2">
                                 <label for="">Categoria:</label>
