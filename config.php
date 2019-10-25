@@ -20,10 +20,10 @@ if(!$producao){
 
     return [
         'database' => [
-            'name' => 'sistemajf',
-            'username' => 'sistemajf',
-            'password' => 'pass',
-            'connection' => 'mysql:host=127.0.0.1',
+            'name' => 'jfpecasautomot',
+            'username' => 'jfpecasautomot',
+            'password' => 'jfpecas21',
+            'connection' => 'mysql:host=mysql13-farm76.kinghost.net',
             'options' => [
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
             ]
