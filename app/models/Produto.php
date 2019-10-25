@@ -24,7 +24,7 @@ class Produto extends Model
         $produto = $_POST;
 
         date_default_timezone_set('America/Sao_Paulo');
-        $produto['data_entrada'] = date('d-m-y');
+        $produto['data_entrada'] = date('d/m/Y');
 
         Produto::cadastrar($produto);
     }

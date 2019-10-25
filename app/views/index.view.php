@@ -67,6 +67,23 @@
                 <!-- /.col -->
             </div>
             <!-- /.row -->
+
+            <div class="row white-box" style="text-align:center;margin:5%;">
+                <div class="col-md-4">
+                    <iframe allowtransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" src="https://www.cptec.inpe.br/widget/widget.php?p=3591&w=h&c=909090&f=ffffff" height="200px" width="100%"></iframe>
+                </div>
+                <div class="col-md-4">
+                    <h1>
+                        <i class="fa fa-calendar"></i> Data: <br><br> <?=date("d/m/Y");?>
+                    </h1>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://api.whatsapp.com/send?phone=5551998221777"><i class="fa fa-whatsapp ajuda"></i></a>
+                    <h3>Clique para pedir suporte</h1>
+                </div>
+            </div>
+            
+
         </section>
         <!-- /.content -->
     </div>

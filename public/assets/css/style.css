@@ -103,3 +103,9 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.ajuda{
+    font-size:120px;
+    color:#26D367;
+    text-align:center;
+}
