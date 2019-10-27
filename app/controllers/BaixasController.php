@@ -22,4 +22,15 @@ class BaixasController extends Controller
         return $this->responderJSON($_POST);
     }
 
+    public function listar()
+    {
+        $baixas = Baixa::buscar();
+
+        foreach($baixas as $baixa){
+            $baixa->produto_nome = Produto::encontrar($baixa->produto_id);
+        }
+
+        return view('listar-baixas', compact("baixas"));
+    }
+
 }

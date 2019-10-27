@@ -40,6 +40,7 @@ if(isset($_SESSION['hierarquia']) && $_SESSION['hierarquia'] == 'user'){
     $router->post("$folder/deletar-usuario", 'UsersController@destroy');
 
     $router->get("$folder/baixas", 'BaixasController@index');
+    $router->get("$folder/listar-baixas", 'BaixasController@listar');
     $router->post("$folder/registrar-baixa", 'BaixasController@darBaixa');
 
 }

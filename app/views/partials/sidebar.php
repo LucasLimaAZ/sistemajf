@@ -39,6 +39,11 @@
 					<i class="fa fa-cart-arrow-down"></i> <span>Dar Baixa</span>
 				</a>
 			</li>
+			<li>
+				<a href="listar-baixas">
+					<i class="fa fa-bar-chart"></i> <span>Listar Baixas</span>
+				</a>
+			</li>
 		</ul>
 	</section>
 </aside>

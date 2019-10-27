@@ -7,16 +7,33 @@ $(document).ready(() => {
 
         let produtos = JSON.parse(response);
 
+        $("#referencia-produto").change(() => {
+            let busca = true;
+            let nomeProduto = $('#nome-produto').val();
+            let referenciaProduto = $('#referencia-produto').val();
+            produtos.forEach(produto => {
+                if(busca){
+                    if(nomeProduto.toUpperCase() == produto.nome.toUpperCase() && referenciaProduto.toUpperCase() == produto.referencia.toUpperCase()){
+                        $("#produto-existe").fadeIn(200);
+                        busca = false;
+                    }else{
+                        $("#produto-existe").fadeOut(200);
+                    }
+                }
+            });
+        });
+
         $("#nome-produto").change(() => {
             let busca = true;
             let nomeProduto = $('#nome-produto').val();
+            let referenciaProduto = $('#referencia-produto').val();
             produtos.forEach(produto => {
                 if(busca){
-                    if(nomeProduto.toUpperCase() == produto.nome.toUpperCase()){
-                        $("#produto-existe").show(200);
+                    if(nomeProduto.toUpperCase() == produto.nome.toUpperCase() && referenciaProduto.toUpperCase() == produto.referencia.toUpperCase()){
+                        $("#produto-existe").fadeIn(200);
                         busca = false;
                     }else{
-                        $("#produto-existe").hide(200);
+                        $("#produto-existe").fadeOut(200);
                     }
                 }
             });

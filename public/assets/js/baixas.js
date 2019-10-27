@@ -32,9 +32,42 @@ $(document).ready(() => {
         }
     });
 
+    $('#baixas').DataTable({
+        responsive:true,
+        columnDefs: [
+            { responsivePriority: 1, targets: 0 },
+            { responsivePriority: 3, targets: 1 },
+            { responsivePriority: 2, targets: -1 }
+        ],
+        "language":{
+            "sEmptyTable": "Nenhum produto encontrado",
+            "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ produtos",
+            "sInfoEmpty": "Mostrando 0 até 0 de 0 produtos",
+            "sInfoFiltered": "(Filtrados de _MAX_ produtos)",
+            "sInfoPostFix": "",
+            "sInfoThousands": ".",
+            "sLengthMenu": "_MENU_ Produtos por página",
+            "sLoadingRecords": "Carregando...",
+            "sProcessing": "Processando...",
+            "sZeroRecords": "Nenhum produto encontrado",
+            "sSearch": "Pesquisar:",
+            "oPaginate": {
+                "sNext": "Próximo",
+                "sPrevious": "Anterior",
+                "sFirst": "Primeiro",
+                "sLast": "Último"
+            },
+            "oAria": {
+                "sSortAscending": ": Ordenar colunas de forma ascendente",
+                "sSortDescending": ": Ordenar colunas de forma descendente"
+            }
+        }
+    });
+
 });
 
-function quantidade(e){
+function quantidade(e)
+{
 
     let id = e.id;
     let quantidadeAtual = $(`#quantidade-${id}`).val();
@@ -55,8 +88,19 @@ function quantidade(e){
             $.post('atualiza-produto', dados, response => {
                 console.log(response);
             });
+
+            registrarBaixa(dados, quantidade);
         }
 
     }
 
 };
+
+function registrarBaixa(dados, quantidade)
+{
+    let baixa = {produto_id:dados.id, quantidade:quantidade};
+    
+    $.post('registrar-baixa', baixa, response => {
+        console.log(response);
+    });
+}

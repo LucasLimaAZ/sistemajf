@@ -28,11 +28,11 @@
                             <div class="col-md-4">
                                 <label for="">Título:</label>
                                 <input type="text" name="nome" id="nome-produto" class="form-control" placeholder="Nome da peça" required>
-                                <span id="produto-existe" style="color:red;display:none;"> Um produto com o mesmo nome já existe!</span>
                             </div>
                             <div class="col-md-4">
                                 <label for="">Referência:</label>
-                                <input type="text" name="referencia" class="form-control">
+                                <input type="text" name="referencia" id="referencia-produto" class="form-control">
+                                <span id="produto-existe" style="color:red;display:none;"> Um produto com o mesmo nome e referência já existe!</span>
                             </div>
                             <div class="col-md-4">
                                 <label for="">Aplicação:</label>
@@ -67,7 +67,10 @@
                         </div>
 
                         <div class="row pt-3">
-                            <div class="col-md-4 col-md-offset-4" style="padding-top:24px;">
+                            <div class="col-md-4" style="padding-top:24px;">
+                                <button type="reset" class="btn btn-secondary">Limpar</button>
+                            </div>
+                            <div class="col-md-4" style="padding-top:24px;">
                                 <button class="btn btn-primary" id="botao-produto" type="submit" style="width:100%;">Cadastrar</button>
                             </div>
                         </div>

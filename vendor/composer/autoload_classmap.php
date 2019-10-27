@@ -17,7 +17,7 @@ return array(
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
-    'App\\models\\Arquivos' => $baseDir . '/app/models/Arquivos.php',
+    'App\\models\\Baixa' => $baseDir . '/app/models/Baixa.php',
     'App\\models\\Email' => $baseDir . '/app/models/Email.php',
     'App\\models\\Model' => $baseDir . '/app/models/Model.php',
     'App\\models\\Produto' => $baseDir . '/app/models/Produto.php',
