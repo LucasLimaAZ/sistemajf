@@ -52,7 +52,6 @@ class QueryBuilder
             $query .= "AND `{$dado}` = '{$valor}' ";
             }
         }
-dd($query);
         try 
         {
             $resultado = $this->pdo->prepare(utf8_decode($query));

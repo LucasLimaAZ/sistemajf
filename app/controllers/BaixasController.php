@@ -27,7 +27,10 @@ class BaixasController extends Controller
         $baixas = Baixa::buscar();
 
         foreach($baixas as $baixa){
-            $baixa->produto_nome = Produto::encontrar($baixa->produto_id);
+            $produto = Produto::encontrar(["id" => $baixa->produto_id]);
+            $baixa->produto_nome = $produto[0]->nome;
+            $baixa->produto_referencia = $produto[0]->referencia;
+            $baixa->produto_aplicacao = $produto[0]->aplicacao;
         }
 
         return view('listar-baixas', compact("baixas"));

@@ -30,7 +30,9 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Produto Id</th>
-                                    <th>Produto Nome</th>
+                                    <th>Nome</th>
+                                    <th>Referência</th>
+                                    <th>Aplicação</th>
                                     <th>Quantidade</th>
                                     <th>Data</th>
                                 </tr>
@@ -41,6 +43,8 @@
                                     <td><?=$baixa->id;?></td>
                                     <td><?=$baixa->produto_id;?></td>
                                     <td><?=$baixa->produto_nome;?></td>
+                                    <td><?=$baixa->produto_referencia;?></td>
+                                    <td><?=$baixa->produto_aplicacao;?></td>
                                     <td><?=$baixa->quantidade;?></td>
                                     <td><?=$baixa->data;?></td>
                                 </tr>
