@@ -30,7 +30,7 @@
                         <div class="row">
                             <div class="col-md-12">
 
-                                <table id="produtos" class="display responsive nowrap dataTable no-footer dtr-inline collapsed">
+                                <table id="produtos" class="display responsive dataTable no-footer dtr-inline collapsed">
                                     <thead>
                                         <tr>
                                             <th>Id</th>
@@ -47,6 +47,9 @@
                                         <?php foreach($produtos as $produto): ?>
                                         <tr role="row">
                                             <input type="hidden" id="quantidade-<?=$produto->id;?>" value="<?=$produto->quantidade;?>">
+                                            <input type="hidden" id="nome-<?=$produto->id;?>" value="<?=$produto->nome;?>">
+                                            <input type="hidden" id="referencia-<?=$produto->id;?>" value="<?=$produto->referencia;?>">
+                                            <input type="hidden" id="aplicacao-<?=$produto->id;?>" value="<?=$produto->aplicacao;?>">
                                             <td tabindex="0" class="sorting_1"><?=$produto->id;?></td>
                                             <td tabindex="1"><?=$produto->nome;?></td>
                                             <td tabindex="2"><?=$produto->referencia;?></td>
@@ -54,7 +57,12 @@
                                             <td tabindex="4"><?=$produto->valor_custo;?></td>
                                             <td tabindex="5"><?=$produto->valor_venda;?></td>
                                             <td tabindex="6"><?=$produto->data_entrada;?></td>
-                                            <td tabindex="7"><span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> <a id="<?=$produto->id;?>" href="javascript:void(0);" onclick="quantidade(this);"><span class="adicionar-ao-estoque"><i class="fa fa-cart-arrow-down"></i> BAIXA</span></a></td>
+                                            <td tabindex="7">
+                                                <span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> 
+                                                <a id="<?=$produto->id;?>" href="javascript:void(0);" onclick="quantidade(this);">
+                                                    <span class="adicionar-ao-estoque"><i class="fa fa-cart-arrow-down"></i></span>
+                                                </a>
+                                            </td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>

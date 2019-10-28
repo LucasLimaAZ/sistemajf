@@ -22,7 +22,7 @@
             <div class="row">
                 <form id="produto">
                     <div class="col-md-8 col-md-offset-2 white-box">
-                        <h1 class="title"><i class="fa fa-shopping-cart"></i> Cadastro de Protudos</h1>
+                        <h1 class="title"><i class="fa fa-shopping-cart"></i> Cadastro de Produtos</h1>
 
                         <div class="row pt-3">
                             <div class="col-md-4">

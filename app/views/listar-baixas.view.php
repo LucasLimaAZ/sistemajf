@@ -29,11 +29,10 @@
                             <thead>
                                 <tr>
                                     <th>Id</th>
-                                    <th>Produto Id</th>
-                                    <th>Nome</th>
+                                    <th>Produto</th>
                                     <th>Referência</th>
                                     <th>Aplicação</th>
-                                    <th>Quantidade</th>
+                                    <th>Unidades Vendidas</th>
                                     <th>Data</th>
                                 </tr>
                             </thead>
@@ -41,7 +40,6 @@
                                 <?php foreach($baixas as $baixa): ?>
                                 <tr role="row">
                                     <td><?=$baixa->id;?></td>
-                                    <td><?=$baixa->produto_id;?></td>
                                     <td><?=$baixa->produto_nome;?></td>
                                     <td><?=$baixa->produto_referencia;?></td>
                                     <td><?=$baixa->produto_aplicacao;?></td>

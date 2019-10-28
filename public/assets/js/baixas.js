@@ -91,36 +91,39 @@ function quantidade(e)
 
             let dados = {
                 id:id, 
-                quantidade:novaQuantidade, 
+                quantidade:novaQuantidade
+            };
+    
+            $.post('atualiza-produto', dados, response => {
+                console.log("Produto atualizado: ",response);
+            });
+
+            let dadosBaixa = {
+                id:id, 
+                quantidade:novaQuantidade,
                 produto_nome:produto_nome, 
                 produto_referencia:produto_referencia, 
                 produto_aplicacao:produto_aplicacao
             };
-    
-            $.post('atualiza-produto', dados, response => {
-                console.log(response);
-            });
-
-            registrarBaixa(dados, quantidade);
+            
+            registrarBaixa(dadosBaixa, quantidade);
         }
 
     }
 
 };
 
-function registrarBaixa(dados, quantidade)
+function registrarBaixa(dadosBaixa, quantidade)
 {
     let baixa = {
-        produto_id:dados.id, 
-        produto_id:dados.produto_nome, 
-        produto_id:dados.produto_referencia, 
-        produto_id:dados.produto_aplicacao, 
+        produto_id:dadosBaixa.id, 
+        produto_nome:dadosBaixa.produto_nome, 
+        produto_referencia:dadosBaixa.produto_referencia, 
+        produto_aplicacao:dadosBaixa.produto_aplicacao, 
         quantidade:quantidade
     };
-
-    console.log(baixa);
     
     $.post('registrar-baixa', baixa, response => {
-        console.log(response);
+        console.log("Baixa registrada: ", response);
     });
 }
