@@ -46,7 +46,7 @@
                         </div>
                         <div class="col-md-3">
                             <label for="data_entrada">Data de Entrada:</label>
-                            <input id="editar-data_entrada" name="data_entrada" class="form-control" type="date">
+                            <input id="editar-data_entrada" name="data_entrada" class="form-control" type="text">
                         </div>
                         <div class="col-md-3">
                             <label for="quantidade">Quantidade:</label>

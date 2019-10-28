@@ -71,19 +71,31 @@ function quantidade(e)
 
     let id = e.id;
     let quantidadeAtual = $(`#quantidade-${id}`).val();
+    let produto_nome = $(`#nome-${id}`).val();
+    let produto_referencia = $(`#referencia-${id}`).val();
+    let produto_aplicacao = $(`#aplicacao-${id}`).val();
     let quantidade = prompt("Por favor insira quantas unidades deste produto foram vendidas:");
     let novaQuantidade = parseInt(quantidadeAtual) - parseInt(quantidade);
 
     if(quantidade != null){
 
         if(novaQuantidade < 0){
+
             alert("Você não pode dar baixa em mais produtos do que você tem!");
             return;
+
         }else{
             let quantidadeAtual = $(`#quantidade-${id}`).val(novaQuantidade);
 
             $(`#quantidade-atual-${id}`).html(novaQuantidade);
-            let dados = {id:id, quantidade:novaQuantidade};
+
+            let dados = {
+                id:id, 
+                quantidade:novaQuantidade, 
+                produto_nome:produto_nome, 
+                produto_referencia:produto_referencia, 
+                produto_aplicacao:produto_aplicacao
+            };
     
             $.post('atualiza-produto', dados, response => {
                 console.log(response);
@@ -98,7 +110,15 @@ function quantidade(e)
 
 function registrarBaixa(dados, quantidade)
 {
-    let baixa = {produto_id:dados.id, quantidade:quantidade};
+    let baixa = {
+        produto_id:dados.id, 
+        produto_id:dados.produto_nome, 
+        produto_id:dados.produto_referencia, 
+        produto_id:dados.produto_aplicacao, 
+        quantidade:quantidade
+    };
+
+    console.log(baixa);
     
     $.post('registrar-baixa', baixa, response => {
         console.log(response);

@@ -17,10 +17,10 @@
             </ol>
         </section>
 
-        <section class="tabela-produtos">
+        <section class="tabela-produtos" style="padding-top:30px;">
             <div class="row">
 
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-10 col-md-offset-1">
                     <div class="white-box">
                         <div class="row">
                             <div class="col-md-12">

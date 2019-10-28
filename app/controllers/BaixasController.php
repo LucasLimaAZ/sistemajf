@@ -17,7 +17,12 @@ class BaixasController extends Controller
 
     public function darBaixa()
     {
-        Baixa::registrar($_POST);
+        $baixa = $_POST;
+        $produto = Produto::encontrar(["id" => $_POST['produto_id']]);
+        $baixa['produto_nome'] = $produto[0]->nome;
+        $baixa['produto_referencia'] = $produto[0]->referencia;
+        $baixa['produto_aplicacao'] = $produto[0]->aplicacao;
+        Baixa::registrar($baixa);
 
         return $this->responderJSON($_POST);
     }
@@ -25,13 +30,6 @@ class BaixasController extends Controller
     public function listar()
     {
         $baixas = Baixa::buscar();
-
-        foreach($baixas as $baixa){
-            $produto = Produto::encontrar(["id" => $baixa->produto_id]);
-            $baixa->produto_nome = $produto[0]->nome;
-            $baixa->produto_referencia = $produto[0]->referencia;
-            $baixa->produto_aplicacao = $produto[0]->aplicacao;
-        }
 
         return view('listar-baixas', compact("baixas"));
     }
