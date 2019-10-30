@@ -72,6 +72,7 @@
                             </div>
                             <div class="col-md-4" style="padding-top:24px;">
                                 <button class="btn btn-primary" id="botao-produto" type="submit" style="width:100%;">Cadastrar</button>
+                                <p id="sucesso" style="text-align:center;color:green;display:none;padding-top:20px;">Produto Cadastrado com Sucesso!</p>
                             </div>
                         </div>
 
