@@ -54,8 +54,8 @@
                                             <td tabindex="1"><?=$produto->nome;?></td>
                                             <td tabindex="2"><?=$produto->referencia;?></td>
                                             <td tabindex="3"><?=$produto->aplicacao;?></td>
-                                            <td tabindex="4"><?=$produto->valor_custo;?></td>
-                                            <td tabindex="5"><?=$produto->valor_venda;?></td>
+                                            <td tabindex="4">R$ <?=valor_centavos($produto->valor_custo);?></td>
+                                            <td tabindex="5">R$ <?=valor_centavos($produto->valor_venda);?></td>
                                             <td tabindex="6"><?=$produto->data_entrada;?></td>
                                             <td tabindex="7">
                                                 <span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> 

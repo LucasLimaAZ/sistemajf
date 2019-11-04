@@ -46,8 +46,8 @@
                                     <td><?=$produto->nome;?></td>
                                     <td><?=$produto->referencia;?></td>
                                     <td><?=$produto->aplicacao;?></td>
-                                    <td><?=$produto->valor_custo;?></td>
-                                    <td><?=$produto->valor_venda;?></td>
+                                    <td>R$ <?=valor_centavos($produto->valor_custo);?></td>
+                                    <td>R$ <?=valor_centavos($produto->valor_venda);?></td>
                                     <td><?=$produto->data_entrada;?></td>
                                     <td><span id="quantidade-atual-<?=$produto->id;?>"><?=$produto->quantidade;?></span> <a id="<?=$produto->id;?>" href="javascript:void(0);" onclick="quantidade(this);"><i class="fa fa-plus adicionar-ao-estoque"></i></a></td>
                                 </tr>

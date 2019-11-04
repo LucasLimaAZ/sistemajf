@@ -104,8 +104,8 @@ function editar(e)
     $("#editar-categoria").val($(`#categoria-${id}`).val());
     $("#editar-referencia").val($(`#referencia-${id}`).html());
     $("#editar-aplicacao").val($(`#aplicacao-${id}`).html());
-    $("#editar-custo").val($(`#valor_custo-${id}`).html().replace(".", ","));
-    $("#editar-valor_venda").val($(`#valor_venda-${id}`).html().replace(".", ","));
+    $("#editar-custo").val($(`#valor_custo-${id}`).val().replace(".", ","));
+    $("#editar-valor_venda").val($(`#valor_venda-${id}`).val().replace(".", ","));
     $("#editar-data_entrada").val($(`#data_entrada-${id}`).html());
     $("#editar-quantidade").val($(`#quantidade-${id}`).val());
 }

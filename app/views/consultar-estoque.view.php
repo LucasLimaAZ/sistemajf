@@ -48,8 +48,8 @@
                                     <td><?=categoria($produto->categoria);?></td>
                                     <td><?=$produto->referencia;?></td>
                                     <td><?=$produto->aplicacao;?></td>
-                                    <td><?=$produto->valor_custo;?></td>
-                                    <td><?=$produto->valor_venda;?></td>
+                                    <td>R$ <?=valor_centavos($produto->valor_custo);?></td>
+                                    <td>R$ <?=valor_centavos($produto->valor_venda);?></td>
                                     <td><?=$produto->data_entrada;?></td>
                                     <td><?=$produto->quantidade;?></td>
                                 </tr>

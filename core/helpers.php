@@ -40,3 +40,12 @@ function categoria($categoria)
             break;
     }
 }
+
+function valor_centavos($valor)
+{
+    $val = str_replace(".", ",", $valor);
+    if(filter_var($valor, FILTER_VALIDATE_INT)){
+        $val .= ',00';
+    }
+    return $val;
+}

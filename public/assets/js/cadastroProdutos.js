@@ -25,10 +25,8 @@ $("#produto").submit(() => {
     procurarAmbiguo();
 
     if(aviso){
-        var r = confirm("Você tem certeza de que deseja cadastrar um produto já existente?");
-        if(!r){
-            return;
-        }
+        alert("VOCÊ NÃO PODE CADASTRAR UM PRODUTO JÁ CADASTRADO!!!");
+        return;
     }
 
     $("#valor_custo").val($("#valor_custo").val().replace(".", ""));
