@@ -52,8 +52,8 @@
                                     <td tabindex="2" id="html-categoria-<?=$produto->id;?>"><?=categoria($produto->categoria);?></td>
                                     <td tabindex="3" id="referencia-<?=$produto->id;?>"><?=$produto->referencia;?></td>
                                     <td tabindex="4" id="aplicacao-<?=$produto->id;?>"><?=$produto->aplicacao;?></td>
-                                    <td tabindex="5" >R$ <?=valor_centavos($produto->valor_custo);?></td>
-                                    <td tabindex="6" >R$ <?=valor_centavos($produto->valor_venda);?></td>
+                                    <td tabindex="5" id="table-valor_custo-<?=$produto->id;?>" >R$ <?=valor_centavos($produto->valor_custo);?></td>
+                                    <td tabindex="6" id="table-valor_venda-<?=$produto->id;?>">R$ <?=valor_centavos($produto->valor_venda);?></td>
                                     <td tabindex="7" id="data_entrada-<?=$produto->id;?>"><?=$produto->data_entrada;?></td>
                                     <td tabindex="8" id="html-quantidade-<?=$produto->id;?>"><?=$produto->quantidade;?></td>
                                     <td tabindex="9"><span id="<?=$produto->id;?>" onclick="editar(this);" class="botao-editar"><i class="fa fa-edit"></i></span></td>

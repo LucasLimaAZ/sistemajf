@@ -64,8 +64,8 @@ $("#atualiza-produto").submit(() => {
         $(`#html-categoria-${id}`).html($("#editar-categoria").val());
         $(`#referencia-${id}`).html($("#editar-referencia").val());
         $(`#aplicacao-${id}`).html($("#editar-aplicacao").val());
-        $(`#valor_custo-${id}`).html($("#editar-custo").val());
-        $(`#valor_venda-${id}`).html($("#editar-valor_venda").val());
+        $(`#table-valor_custo-${id}`).html("R$ "+$("#editar-custo").val());
+        $(`#table-valor_venda-${id}`).html("R$ "+$("#editar-valor_venda").val());
         $(`#data_entrada-${id}`).html($("#editar-data_entrada").val());
         $(`#html-quantidade-${id}`).html($("#editar-quantidade").val());
     })
