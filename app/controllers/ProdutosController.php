@@ -36,7 +36,7 @@ class ProdutosController extends Controller
     public function acrescentar()
     {
         $produtos = Produto::buscar();
-
+    
         return view('acrescentar-produtos', compact('produtos'));
     }
 
@@ -50,7 +50,7 @@ class ProdutosController extends Controller
     public function buscar()
     {
         $produtos = Produto::buscar();
-        
+        utf8($produtos);
         return $this->responderJSON($produtos);
     }
 
