@@ -2,8 +2,8 @@
 @section("content")
 <div class="wrapper">
 
-    @include("navbar")
-    @include("sidebar")
+    @include("layouts.navbar")
+    @include("layouts.sidebar")
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -29,7 +29,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">Produtos Cadastrados</span>
-                            <span class="info-box-number"><?=$numeros['produtos'];?></span>
+                            <span class="info-box-number">{{ $numeros["produtos"] }}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>

@@ -30,12 +30,12 @@
         </li>
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="public/assets/img/user.png" class="user-image" alt="User Image">
+            <img src="{{asset('assets/img/user.png')}}" class="user-image" alt="User Image">
             <span class="hidden-xs">USUARIO</span>
           </a>
           <ul class="dropdown-menu">
             <li class="user-header">
-              <img src="public/assets/img/user.png" class="img-circle" alt="User Image">
+              <img src="{{asset('assets/img/user.png')}}" class="img-circle" alt="User Image">
               <p>
                 USUARIO
                 <small>HIERARQUIA</small>

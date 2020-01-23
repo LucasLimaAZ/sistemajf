@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sistema JF</title>
+
+    <link rel="stylesheet" href="{{asset('theme/bower_components/bootstrap/dist/css/bootstrap.min.css')}}">
+	<link rel="stylesheet" href="{{asset('theme/bower_components/font-awesome/css/font-awesome.min.css')}}">
+	<link rel="stylesheet" href="{{asset('theme/bower_components/Ionicons/css/ionicons.min.css')}}">
+	<link rel="stylesheet" href="{{asset('theme/bower_components/jvectormap/jquery-jvectormap.css')}}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+	<link rel="stylesheet" href="{{asset('theme/dist/css/AdminLTE.min.css')}}">
+	<link rel="stylesheet" href="{{asset('theme/dist/css/skins/_all-skins.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/main.sass')}}">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+
 </head>
 <body>
     @yield("content")
@@ -111,18 +122,17 @@
 
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<script src="public/plugins/jquery-3.4.1.min.js"></script>
-<script src="public/theme/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="public/theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="public/theme/bower_components/fastclick/lib/fastclick.js"></script>
-<script src="public/theme/dist/js/adminlte.min.js"></script>
-<script src="public/theme/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<script src="public/theme/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="public/theme/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<script src="public/theme/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<script src="public/theme/bower_components/chart.js/Chart.js"></script>
-<script src="public/theme/dist/js/pages/dashboard2.js"></script>
-<script src="public/theme/dist/js/demo.js"></script>
+<script src="{{asset('theme/bower_components/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('theme/bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('theme/bower_components/fastclick/lib/fastclick.js')}}"></script>
+<script src="{{asset('theme/dist/js/adminlte.min.js')}}"></script>
+<script src="{{asset('theme/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js')}}"></script>
+<script src="{{asset('theme/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+<script src="{{asset('theme/plugins/jvectormap/jquery-jvectormap-world-mill-en.js')}}"></script>
+<script src="{{asset('theme/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+<script src="{{asset('theme/bower_components/chart.js/Chart.js')}}"></script>
+<script src="{{asset('theme/dist/js/pages/dashboard2.js')}}"></script>
+<script src="{{asset('theme/dist/js/demo.js')}}"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
